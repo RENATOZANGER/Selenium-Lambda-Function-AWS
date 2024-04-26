@@ -2,7 +2,7 @@
 
 ## Selenium Lambda Function
 
-This repository contains a Dockerfile and a Python script to create a Lambda function for web scraping using Selenium.
+This repository contains a Dockerfile and a Python script to create a Lambda function for web scraping using Selenium.This function uses Selenium to perform web scraping on the provided URL (`https://example.com/`)
 
 ### Dockerfile
 
@@ -22,7 +22,7 @@ To use this Lambda function, follow these steps:
 1. Create a new private repository in Amazon ECR:
 - Ex: account_id.dkr.ecr.us-east-1.amazonaws.com/lambda_scraping
 2. Push the image to Amazon ECR:
-- Retrieve an authentication token and authenticate your Docker client to your registry
+<!--Retrieve an authentication token and authenticate your Docker client to your registry -->
 - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin account_id.dkr.ecr.us-east-1.amazonaws.com
 3. Build your Docker image
 - docker build -t lambda_scraping .
